@@ -93,7 +93,7 @@ If your Codex environment supports GitHub skill installation by repository path,
 Repository:
 
 ```text
-https://github.com/izetent/rn-mobile-workflow.git
+https://github.com/izetent/codex-skills.git
 ```
 
 Skill paths:
@@ -109,10 +109,10 @@ If you install manually, clone the repo and copy the skill directory you need in
 Example:
 
 ```bash
-git clone https://github.com/izetent/rn-mobile-workflow.git /tmp/rn-mobile-workflow
-cp -R /tmp/rn-mobile-workflow/skills/rn-fix-bug ~/.codex/skills/rn-fix-bug
-cp -R /tmp/rn-mobile-workflow/skills/rn-add-feature ~/.codex/skills/rn-add-feature
-cp -R /tmp/rn-mobile-workflow/skills/rn-native-bridge ~/.codex/skills/rn-native-bridge
+git clone https://github.com/izetent/codex-skills.git /tmp/codex-skills
+cp -R /tmp/codex-skills/skills/rn-fix-bug ~/.codex/skills/rn-fix-bug
+cp -R /tmp/codex-skills/skills/rn-add-feature ~/.codex/skills/rn-add-feature
+cp -R /tmp/codex-skills/skills/rn-native-bridge ~/.codex/skills/rn-native-bridge
 ```
 
 Then restart Codex.

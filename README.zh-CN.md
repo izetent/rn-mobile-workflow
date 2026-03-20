@@ -93,7 +93,7 @@ README.zh-CN.md
 仓库地址：
 
 ```text
-https://github.com/izetent/rn-mobile-workflow.git
+https://github.com/izetent/codex-skills.git
 ```
 
 skill 路径：
@@ -109,10 +109,10 @@ skills/rn-native-bridge
 示例：
 
 ```bash
-git clone https://github.com/izetent/rn-mobile-workflow.git /tmp/rn-mobile-workflow
-cp -R /tmp/rn-mobile-workflow/skills/rn-fix-bug ~/.codex/skills/rn-fix-bug
-cp -R /tmp/rn-mobile-workflow/skills/rn-add-feature ~/.codex/skills/rn-add-feature
-cp -R /tmp/rn-mobile-workflow/skills/rn-native-bridge ~/.codex/skills/rn-native-bridge
+git clone https://github.com/izetent/codex-skills.git /tmp/codex-skills
+cp -R /tmp/codex-skills/skills/rn-fix-bug ~/.codex/skills/rn-fix-bug
+cp -R /tmp/codex-skills/skills/rn-add-feature ~/.codex/skills/rn-add-feature
+cp -R /tmp/codex-skills/skills/rn-native-bridge ~/.codex/skills/rn-native-bridge
 ```
 
 然后重启 Codex。
