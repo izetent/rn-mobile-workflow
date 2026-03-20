@@ -6,6 +6,7 @@ It currently contains two skills:
 
 - `skills/rn-mobile-workflow`
 - `skills/rn-native-bridge`
+- `skills/bug-investigation-workflow`
 
 ## Skills
 
@@ -46,6 +47,25 @@ Path:
 skills/rn-native-bridge
 ```
 
+### `bug-investigation-workflow`
+
+Use for bug fixing tasks where Codex must investigate before editing, gather evidence, add temporary logs when needed, decide whether to present multiple options first, and always close the loop with verification.
+
+Focus:
+
+- root cause versus symptom
+- evidence-first debugging
+- temporary logging and narrow instrumentation
+- direct minimal fixes when the cause is clear
+- option comparison when multiple fixes are valid
+- regression-aware verification
+
+Path:
+
+```text
+skills/bug-investigation-workflow
+```
+
 ## Repository structure
 
 ```text
@@ -55,6 +75,10 @@ skills/
     references/
     agents/
   rn-native-bridge/
+    SKILL.md
+    references/
+    agents/
+  bug-investigation-workflow/
     SKILL.md
     references/
     agents/
@@ -77,6 +101,7 @@ Skill paths:
 ```text
 skills/rn-mobile-workflow
 skills/rn-native-bridge
+skills/bug-investigation-workflow
 ```
 
 If you install manually, clone the repo and copy the skill directory you need into your local Codex skills directory.
@@ -87,6 +112,7 @@ Example:
 git clone https://github.com/izetent/rn-mobile-workflow.git /tmp/rn-mobile-workflow
 cp -R /tmp/rn-mobile-workflow/skills/rn-mobile-workflow ~/.codex/skills/rn-mobile-workflow
 cp -R /tmp/rn-mobile-workflow/skills/rn-native-bridge ~/.codex/skills/rn-native-bridge
+cp -R /tmp/rn-mobile-workflow/skills/bug-investigation-workflow ~/.codex/skills/bug-investigation-workflow
 ```
 
 Then restart Codex.
@@ -99,6 +125,8 @@ Use rn-mobile-workflow to analyze why this RN feed stutters on Android but not i
 Use rn-native-bridge to review this TurboModule API design.
 
 Use rn-native-bridge to determine whether this layout mismatch is caused by RN host size, native viewport size, or content render mode.
+
+Use bug-investigation-workflow to investigate this bug before editing, add temporary logs if needed, and only fix it after the root cause is confirmed.
 ```
 
 ## Language

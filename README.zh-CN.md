@@ -6,6 +6,7 @@
 
 - `skills/rn-mobile-workflow`
 - `skills/rn-native-bridge`
+- `skills/bug-investigation-workflow`
 
 ## 当前包含的 skill
 
@@ -46,6 +47,25 @@ skills/rn-mobile-workflow
 skills/rn-native-bridge
 ```
 
+### `bug-investigation-workflow`
+
+用于 bug 修复专项，强调修改前先定位、先拿证据、必要时补临时日志、多方案先给方案、修改后必须闭环验证。
+
+重点包括：
+
+- 区分根因和表现
+- 证据优先排查
+- 临时日志和窄范围埋点
+- 根因明确时直接最小修改
+- 多种可行方案时先比较再改
+- 回归风险验证
+
+路径：
+
+```text
+skills/bug-investigation-workflow
+```
+
 ## 仓库结构
 
 ```text
@@ -55,6 +75,10 @@ skills/
     references/
     agents/
   rn-native-bridge/
+    SKILL.md
+    references/
+    agents/
+  bug-investigation-workflow/
     SKILL.md
     references/
     agents/
@@ -77,6 +101,7 @@ skill 路径：
 ```text
 skills/rn-mobile-workflow
 skills/rn-native-bridge
+skills/bug-investigation-workflow
 ```
 
 如果你使用手动安装，可以先克隆仓库，再把需要的 skill 目录拷贝到本地 skills 目录。
@@ -87,6 +112,7 @@ skills/rn-native-bridge
 git clone https://github.com/izetent/rn-mobile-workflow.git /tmp/rn-mobile-workflow
 cp -R /tmp/rn-mobile-workflow/skills/rn-mobile-workflow ~/.codex/skills/rn-mobile-workflow
 cp -R /tmp/rn-mobile-workflow/skills/rn-native-bridge ~/.codex/skills/rn-native-bridge
+cp -R /tmp/rn-mobile-workflow/skills/bug-investigation-workflow ~/.codex/skills/bug-investigation-workflow
 ```
 
 然后重启 Codex。
@@ -99,6 +125,8 @@ Use rn-mobile-workflow to analyze why this RN feed stutters on Android but not i
 Use rn-native-bridge to review this TurboModule API design.
 
 Use rn-native-bridge to determine whether this layout mismatch is caused by RN host size, native viewport size, or content render mode.
+
+Use bug-investigation-workflow to investigate this bug before editing, add temporary logs if needed, and only fix it after the root cause is confirmed.
 ```
 
 ## 语言说明
