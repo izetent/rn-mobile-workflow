@@ -1,0 +1,3 @@
+display_name: RN Native Bridge
+short_description: React Native bridge skill for Native Modules, Native Components, TurboModules, Fabric, JSI, sizing boundaries, and hot-path ownership.
+default_prompt: Use rn-native-bridge to analyze this bridge-related issue. Identify ownership, lifecycle, event and command boundaries, and whether the classic bridge is being used for work that should stay native or move to a UI-thread or JSI-backed path.

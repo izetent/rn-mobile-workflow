@@ -1,93 +1,107 @@
 # rn-mobile-workflow
 
-`rn-mobile-workflow` is a Codex skill for React Native mobile projects that also include Android and iOS native code.
+This repository is a multi-skill Codex repository for React Native mobile development, especially projects that also include Android and iOS native code.
 
-It is designed for real project work rather than generic framework explanation. The skill helps Codex:
+It currently contains two skills:
 
-- separate RN, bridge, Android, and iOS ownership
-- debug cross-platform behavior mismatches
-- analyze native bridge issues
-- investigate playback, feed, scroll, and rendering performance
-- review build, Pod, Gradle, and native integration failures
-- keep fixes small and rooted in actual causes
+- `skills/rn-mobile-workflow`
+- `skills/rn-native-bridge`
 
-## When to use it
+## Skills
 
-Use this skill when a task involves one or more of the following:
+### `rn-mobile-workflow`
 
-- React Native screens or state flow
-- Android native code
-- iOS native code
-- Native Modules or Native Components
-- JSI, Fabric, or TurboModule integration
-- list, feed, animation, rendering, or playback performance
-- layout mismatches between RN host size and native render size
+Use for end-to-end React Native mobile work across RN, Android, and iOS.
+
+Focus:
+
+- root-cause-first debugging
+- separating RN, bridge, Android, and iOS ownership
+- build and integration issues
+- feed, playback, scroll, and rendering performance
 - deciding whether a bug belongs in RN or native
+
+Path:
+
+```text
+skills/rn-mobile-workflow
+```
+
+### `rn-native-bridge`
+
+Use for bridge-specific work involving Native Modules, Native Components, TurboModules, Fabric, JSI, event design, command design, viewport sizing, and cross-layer ownership.
+
+Focus:
+
+- bridge API shape
+- event and command boundaries
+- index versus stable identity
+- host size versus native viewport size
+- high-frequency visual sync ownership
+- bridge lifecycle and thread expectations
+
+Path:
+
+```text
+skills/rn-native-bridge
+```
 
 ## Repository structure
 
 ```text
-SKILL.md
-references/
-  repo-structure.md
-  rn-debug-flow.md
-  android-debug-flow.md
-  ios-debug-flow.md
-  native-bridge-rules.md
-  performance-checklist.md
-  release-checklist.md
-agents/
-  openai.yaml
+skills/
+  rn-mobile-workflow/
+    SKILL.md
+    references/
+    agents/
+  rn-native-bridge/
+    SKILL.md
+    references/
+    agents/
+README.md
+README.zh-CN.md
 ```
-
-## What the skill emphasizes
-
-- root-cause analysis before edits
-- clear ownership boundaries
-- minimal, targeted fixes
-- avoiding delay-based or fallback-based patches
-- keeping high-frequency rendering and timing-sensitive paths native
 
 ## Install in Codex
 
-### Option 1: install from GitHub
+If your Codex environment supports GitHub skill installation by repository path, install the specific skill directory you want.
 
-If your Codex environment supports skill installation from GitHub, install this repository as a skill.
-
-Repository URL:
+Repository:
 
 ```text
 https://github.com/izetent/rn-mobile-workflow.git
 ```
 
-### Option 2: clone into the local skills directory
+Skill paths:
+
+```text
+skills/rn-mobile-workflow
+skills/rn-native-bridge
+```
+
+If you install manually, clone the repo and copy the skill directory you need into your local Codex skills directory.
+
+Example:
 
 ```bash
-git clone https://github.com/izetent/rn-mobile-workflow.git ~/.codex/skills/rn-mobile-workflow
+git clone https://github.com/izetent/rn-mobile-workflow.git /tmp/rn-mobile-workflow
+cp -R /tmp/rn-mobile-workflow/skills/rn-mobile-workflow ~/.codex/skills/rn-mobile-workflow
+cp -R /tmp/rn-mobile-workflow/skills/rn-native-bridge ~/.codex/skills/rn-native-bridge
 ```
 
 Then restart Codex.
 
-## How to trigger it
-
-The most reliable way is to name it explicitly:
-
-```text
-Use rn-mobile-workflow to debug this React Native bridge issue.
-```
-
-Example prompts:
+## Trigger examples
 
 ```text
 Use rn-mobile-workflow to analyze why this RN feed stutters on Android but not iOS.
 
-Use rn-mobile-workflow to review this TurboModule change and identify the likely ownership boundary issue.
+Use rn-native-bridge to review this TurboModule API design.
 
-Use rn-mobile-workflow to determine whether this layout bug belongs to RN, bridge, Android, or iOS.
+Use rn-native-bridge to determine whether this layout mismatch is caused by RN host size, native viewport size, or content render mode.
 ```
 
 ## Language
 
-The skill content is written in English to make it easier to reuse in public GitHub workflows and multi-team environments.
-
+The skills are written in English for broader reuse.  
 For a Chinese overview, see [README.zh-CN.md](./README.zh-CN.md).
