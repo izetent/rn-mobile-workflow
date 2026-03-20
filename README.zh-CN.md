@@ -1,6 +1,6 @@
-# rn-mobile-workflow
+# codex-skills
 
-这是一个面向 React Native 移动端开发的 Codex 多技能仓库，重点覆盖同时包含 Android 和 iOS 原生代码的项目。
+`codex-skills` 是一个面向 React Native 移动端开发的 Codex 多技能仓库，重点覆盖同时包含 Android 和 iOS 原生代码的项目。
 
 当前仓库包含三个核心 skill：
 

@@ -1,6 +1,6 @@
-# rn-mobile-workflow
+# codex-skills
 
-This repository is a multi-skill Codex repository for React Native mobile development, especially projects that also include Android and iOS native code.
+`codex-skills` is a multi-skill Codex repository for React Native mobile development, especially projects that also include Android and iOS native code.
 
 It currently contains three core skills:
 
