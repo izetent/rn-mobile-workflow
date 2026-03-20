@@ -2,32 +2,13 @@
 
 这是一个面向 React Native 移动端开发的 Codex 多技能仓库，重点覆盖同时包含 Android 和 iOS 原生代码的项目。
 
-当前仓库包含两个 skill：
+当前仓库包含三个核心 skill：
 
-- `skills/rn-mobile-workflow`
-- `skills/rn-native-bridge`
-- `skills/rn-fix-bug`
 - `skills/rn-add-feature`
+- `skills/rn-fix-bug`
+- `skills/rn-native-bridge`
 
 ## 当前包含的 skill
-
-### `rn-mobile-workflow`
-
-用于 React Native、Android、iOS 混合项目的整体开发流程。
-
-重点包括：
-
-- 先定位根因再修改
-- 区分 RN、bridge、Android、iOS 的职责边界
-- 构建与集成问题排查
-- feed、播放、滚动、渲染性能问题
-- 判断问题究竟属于 RN 还是 Native
-
-路径：
-
-```text
-skills/rn-mobile-workflow
-```
 
 ### `rn-native-bridge`
 
@@ -89,11 +70,7 @@ skills/rn-add-feature
 
 ```text
 skills/
-  rn-mobile-workflow/
-    SKILL.md
-    references/
-    agents/
-  rn-native-bridge/
+  rn-add-feature/
     SKILL.md
     references/
     agents/
@@ -101,7 +78,7 @@ skills/
     SKILL.md
     references/
     agents/
-  rn-add-feature/
+  rn-native-bridge/
     SKILL.md
     references/
     agents/
@@ -122,10 +99,9 @@ https://github.com/izetent/rn-mobile-workflow.git
 skill 路径：
 
 ```text
-skills/rn-mobile-workflow
-skills/rn-native-bridge
-skills/rn-fix-bug
 skills/rn-add-feature
+skills/rn-fix-bug
+skills/rn-native-bridge
 ```
 
 如果你使用手动安装，可以先克隆仓库，再把需要的 skill 目录拷贝到本地 skills 目录。
@@ -134,10 +110,9 @@ skills/rn-add-feature
 
 ```bash
 git clone https://github.com/izetent/rn-mobile-workflow.git /tmp/rn-mobile-workflow
-cp -R /tmp/rn-mobile-workflow/skills/rn-mobile-workflow ~/.codex/skills/rn-mobile-workflow
-cp -R /tmp/rn-mobile-workflow/skills/rn-native-bridge ~/.codex/skills/rn-native-bridge
 cp -R /tmp/rn-mobile-workflow/skills/rn-fix-bug ~/.codex/skills/rn-fix-bug
 cp -R /tmp/rn-mobile-workflow/skills/rn-add-feature ~/.codex/skills/rn-add-feature
+cp -R /tmp/rn-mobile-workflow/skills/rn-native-bridge ~/.codex/skills/rn-native-bridge
 ```
 
 然后重启 Codex。
@@ -145,15 +120,13 @@ cp -R /tmp/rn-mobile-workflow/skills/rn-add-feature ~/.codex/skills/rn-add-featu
 ## 触发示例
 
 ```text
-Use rn-mobile-workflow to analyze why this RN feed stutters on Android but not iOS.
+Use rn-fix-bug to investigate this bug before editing, add temporary logs if needed, and only fix it after the root cause is confirmed.
+
+Use rn-add-feature to implement this new feature with the smallest correct RN or native boundary.
 
 Use rn-native-bridge to review this TurboModule API design.
 
 Use rn-native-bridge to determine whether this layout mismatch is caused by RN host size, native viewport size, or content render mode.
-
-Use rn-fix-bug to investigate this bug before editing, add temporary logs if needed, and only fix it after the root cause is confirmed.
-
-Use rn-add-feature to implement this new feature with the smallest correct RN or native boundary.
 ```
 
 ## 语言说明

@@ -2,32 +2,13 @@
 
 This repository is a multi-skill Codex repository for React Native mobile development, especially projects that also include Android and iOS native code.
 
-It currently contains two skills:
+It currently contains three core skills:
 
-- `skills/rn-mobile-workflow`
-- `skills/rn-native-bridge`
-- `skills/rn-fix-bug`
 - `skills/rn-add-feature`
+- `skills/rn-fix-bug`
+- `skills/rn-native-bridge`
 
 ## Skills
-
-### `rn-mobile-workflow`
-
-Use for end-to-end React Native mobile work across RN, Android, and iOS.
-
-Focus:
-
-- root-cause-first debugging
-- separating RN, bridge, Android, and iOS ownership
-- build and integration issues
-- feed, playback, scroll, and rendering performance
-- deciding whether a bug belongs in RN or native
-
-Path:
-
-```text
-skills/rn-mobile-workflow
-```
 
 ### `rn-native-bridge`
 
@@ -89,11 +70,7 @@ skills/rn-add-feature
 
 ```text
 skills/
-  rn-mobile-workflow/
-    SKILL.md
-    references/
-    agents/
-  rn-native-bridge/
+  rn-add-feature/
     SKILL.md
     references/
     agents/
@@ -101,7 +78,7 @@ skills/
     SKILL.md
     references/
     agents/
-  rn-add-feature/
+  rn-native-bridge/
     SKILL.md
     references/
     agents/
@@ -122,10 +99,9 @@ https://github.com/izetent/rn-mobile-workflow.git
 Skill paths:
 
 ```text
-skills/rn-mobile-workflow
-skills/rn-native-bridge
-skills/rn-fix-bug
 skills/rn-add-feature
+skills/rn-fix-bug
+skills/rn-native-bridge
 ```
 
 If you install manually, clone the repo and copy the skill directory you need into your local Codex skills directory.
@@ -134,10 +110,9 @@ Example:
 
 ```bash
 git clone https://github.com/izetent/rn-mobile-workflow.git /tmp/rn-mobile-workflow
-cp -R /tmp/rn-mobile-workflow/skills/rn-mobile-workflow ~/.codex/skills/rn-mobile-workflow
-cp -R /tmp/rn-mobile-workflow/skills/rn-native-bridge ~/.codex/skills/rn-native-bridge
 cp -R /tmp/rn-mobile-workflow/skills/rn-fix-bug ~/.codex/skills/rn-fix-bug
 cp -R /tmp/rn-mobile-workflow/skills/rn-add-feature ~/.codex/skills/rn-add-feature
+cp -R /tmp/rn-mobile-workflow/skills/rn-native-bridge ~/.codex/skills/rn-native-bridge
 ```
 
 Then restart Codex.
@@ -145,15 +120,13 @@ Then restart Codex.
 ## Trigger examples
 
 ```text
-Use rn-mobile-workflow to analyze why this RN feed stutters on Android but not iOS.
+Use rn-fix-bug to investigate this bug before editing, add temporary logs if needed, and only fix it after the root cause is confirmed.
+
+Use rn-add-feature to implement this new feature with the smallest correct RN or native boundary.
 
 Use rn-native-bridge to review this TurboModule API design.
 
 Use rn-native-bridge to determine whether this layout mismatch is caused by RN host size, native viewport size, or content render mode.
-
-Use rn-fix-bug to investigate this bug before editing, add temporary logs if needed, and only fix it after the root cause is confirmed.
-
-Use rn-add-feature to implement this new feature with the smallest correct RN or native boundary.
 ```
 
 ## Language
